@@ -1,75 +1,74 @@
-"use client";
 
-import Image from "next/image";
+
+
+
+
+
+
+
+
+
+
 import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Address } from "~~/components/scaffold-eth";
 
 const Home: NextPage = () => {
-  const { address: connectedAddress } = useAccount();
 
   return (
     <>
-      <div className="flex items-center flex-col flex-grow pt-10">
-        <div className="px-5">
-          <h1 className="text-center">
-            <span className="block text-2xl mb-2">Welcome to</span>
-            <div className="block text-4xl font-bold">
-              <div className="inline-block relative w-10 h-10 align-bottom mr-2">
-                <Image alt="Base logo" className="cursor-pointer" fill src="/Base_Symbol_Blue.svg" />
+          <div
+            className="hero min-h-screen"
+            style={{
+              backgroundImage: "url(https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+            }}>
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content text-neutral-content text-center">
+              <div className="max-w-md">
+                <h1 className="mb-5 text-5xl font-bold">Welcome To Breamgo!</h1>
+                <p className="mb-5">
+                  Breamgo is your market place to the world, a window to showcase and sell your products to the world.
+                </p>
+                <button className="btn btn-primary">Get Started</button>
               </div>
-              Scaffold-Base
             </div>
-          </h1>
-          <div className="flex justify-center items-center space-x-2">
-            <p className="my-2 font-medium">Connected Address:</p>
-            <Address address={connectedAddress} />
           </div>
-          <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
-          </p>
-        </div>
-
-        <div className="flex-grow bg-base-300 w-full mt-16 px-8 py-12">
+          <div className="flex-grow bg-base-300 w-full  px-8 py-12">
           <div className="flex justify-center items-center gap-12 flex-col sm:flex-row">
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <BugAntIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Tinker with your smart contract using the{" "}
-                <Link href="/debug" passHref className="link">
-                  Debug Contracts
-                </Link>{" "}
-                tab.
-              </p>
-            </div>
-            <div className="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl">
-              <MagnifyingGlassIcon className="h-8 w-8 fill-secondary" />
-              <p>
-                Explore your local transactions with the{" "}
-                <Link href="/blockexplorer" passHref className="link">
-                  Block Explorer
-                </Link>{" "}
-                tab.
-              </p>
-            </div>
+          <div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+      alt="Album" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">New album is released!</h2>
+    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="card-actions justify-end">
+    <Link href="/merchantsignup" passHref className="link">
+                  Get Started
+                </Link>
+    </div>
+  </div>
+</div>
+            <div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+      alt="Album" />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">New album is released!</h2>
+    <p>Click the button to listen on Spotiwhy app.</p>
+    <div className="card-actions justify-end">
+    <Link href="/merchantsignup" passHref className="link">
+                  Get Started
+                </Link>
+    </div>
+  </div>
+</div>
           </div>
         </div>
-      </div>
     </>
   );
 };
