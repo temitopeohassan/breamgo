@@ -26,6 +26,34 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
+    label: "Merchants",
+    href: "/merchants",
+  },
+  {
+    label: "Products",
+    href: "/products",
+  },
+  {
+    label: "Your Accout",
+    href: "/account",
+  },
+  {
+    label: "Requests",
+    href: "/",
+  },
+  {
+    label: "Want to Sell?",
+    href: "/",
+  },
+  {
+    label: "Blog",
+    href: "/",
+  },
+  {
+    label: "Settings",
+    href: "/settings",
+  },
+  {
     label: "Debug Contracts",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
@@ -107,8 +135,8 @@ export const Header = () => {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold leading-tight">Scaffold-Base</span>
-            <span className="text-xs">Ethereum dev stack</span>
+            <span className="font-bold leading-tight">Breamgo</span>
+            <span className="text-xs">...to the world</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">
@@ -117,9 +145,7 @@ export const Header = () => {
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
-        <FaucetButton />
-        <SuperchainFaucetButton />
-        <BaseFaucetsButton />
+        
       </div>
     </div>
   );
