@@ -7,10 +7,7 @@ import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
 import {
-  BaseFaucetsButton,
-  FaucetButton,
   RainbowKitCustomConnectButton,
-  SuperchainFaucetButton,
 } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
