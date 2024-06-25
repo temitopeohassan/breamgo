@@ -1,17 +1,8 @@
-
-
-
-
-
-
-
-
-
-
 "use client";
 import merchantData from "./merchants.json";
+import type { NextPage } from "next";
 
-export const MerchantsPage = () => {
+export const MerchantsPage: NextPage = () =>{
   const merchants = merchantData.merchants; // Access the merchants array
 
   return (
