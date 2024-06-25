@@ -3,7 +3,7 @@ import productData from "./products.json";
 import type { NextPage } from "next";
 
 
-export const ProductsPage: NextPage = () =>{
+const ProductsPage: NextPage = () =>{
   const products = productData.products; // Access the products array
 
   return (
