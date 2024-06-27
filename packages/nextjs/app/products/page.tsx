@@ -1,5 +1,6 @@
 "use client";
-import productData from "./products.json";
+import productData from "../data.json";
+import Link from "next/link";
 import type { NextPage } from "next";
 
 
@@ -29,7 +30,7 @@ const ProductsPage: NextPage = () =>{
                   <h2 className="card-title">{product.category}</h2>
                   <p>{product.description}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Read More</button>
+                  <button className="btn btn-primary"><Link href={`/product/${product.id}`} passHref>Details</Link></button>
                   </div>
                 </div>
               </div>

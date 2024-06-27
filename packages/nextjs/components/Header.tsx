@@ -23,32 +23,24 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },
   {
-    label: "Merchants",
-    href: "/merchants",
+    label: "Sellers",
+    href: "/sellers",
   },
   {
     label: "Products",
     href: "/products",
   },
   {
-    label: "Your Accout",
+    label: "Your Account",
     href: "/account",
   },
   {
     label: "Requests",
-    href: "/",
-  },
-  {
-    label: "Want to Sell?",
-    href: "/",
+    href: "/requests",
   },
   {
     label: "Blog",
-    href: "/",
-  },
-  {
-    label: "Settings",
-    href: "/settings",
+    href: "/blog",
   },
   {
     label: "Debug Contracts",

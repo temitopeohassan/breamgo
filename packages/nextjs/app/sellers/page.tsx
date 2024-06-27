@@ -1,5 +1,6 @@
 "use client";
-import merchantData from "./merchants.json";
+import merchantData from "../data.json";
+import Link from "next/link";
 import type { NextPage } from "next";
 
 const MerchantsPage: NextPage = () =>{
@@ -10,7 +11,7 @@ const MerchantsPage: NextPage = () =>{
       
       <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 bg-base-300">
       <h1 className="text-center text-5xl">
-              Merchants
+              Sellers
           </h1>
         <div className="px-4 py-6 sm:px-0">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -26,7 +27,7 @@ const MerchantsPage: NextPage = () =>{
                   <h2 className="card-title">{merchant.name}</h2>
                   <p>{merchant.description}</p>
                   <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Read More</button>
+                  <button className="btn btn-primary"><Link href={`/seller/${merchant.id}`} passHref>Seller Details</Link></button>
                   </div>
                 </div>
               </div>
